@@ -42,16 +42,20 @@ let cardHoverHeight = document.getElementById("card-hover")?.style.height;
 	font-weight: 500;
 	position: relative;
 }
-
-.card-hover {
-	animation: out 1.5s ease normal;
-	position: absolute;
-	z-index: 5;
+.explore-card {
+	.card-hover {
+		animation: out 1500ms ease normal;
+		position: absolute;
+		z-index: 5;
+	}
 }
+
 .explore-card:hover {
 	// background: #fff;
 	.card-hover {
 		animation: in 1.5s ease normal forwards;
+		background: #fff;
+		border-radius: 100%;
 	}
 
 	// .card-subtitle {
@@ -76,20 +80,19 @@ let cardHoverHeight = document.getElementById("card-hover")?.style.height;
 }
 
 @keyframes out {
-	0% {
-		background-color: white;
-		width: 500px;
-		height: 500px;
-		border-radius: 100%;
-		transform: scale(1);
-	}
-
 	100% {
 		background-color: white;
 		width: 0;
 		height: 0;
 		border-radius: 100%;
 		transform: scale(0);
+	}
+	0% {
+		background-color: white;
+		width: 500px;
+		height: 500px;
+		border-radius: 100%;
+		transform: scale(1);
 	}
 }
 </style>

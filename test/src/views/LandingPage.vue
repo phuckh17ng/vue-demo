@@ -27,13 +27,15 @@ window.addEventListener("scroll", () => {
 			</div>
 			<div class="banner-desc">
 				<div>
-					<h1 class="banner-desc-1">Made to Be Played</h1>
-					<h3 class="banner-desc-2">The Very Best in Mobile Gaming</h3>
-				</div>
+					<div>
+						<h1 class="banner-desc-1">Made to Be Played</h1>
+						<h3 class="banner-desc-2">The Very Best in Mobile Gaming</h3>
+					</div>
 
-				<div class="btn-download">
-					<img class="btn-download-apple" src="../assets/Apple Store.png" />
-					<img class="btn-download-google" src="../assets/Google Play.png" />
+					<div class="btn-download">
+						<img class="btn-download-apple" src="../assets/Apple Store.png" />
+						<img class="btn-download-google" src="../assets/Google Play.png" />
+					</div>
 				</div>
 			</div>
 		</section>
@@ -64,15 +66,21 @@ window.addEventListener("scroll", () => {
 }
 .figure-mask > img {
 	position: relative;
+	width: 120%;
 	top: 0;
 	// right: 200px;
 	// overflow: hidden;
 }
 .banner-desc {
 	position: absolute;
+	width: 100%;
 	top: 25%;
-	left: 5%;
+	left: 0%;
 	color: #272443;
+}
+.banner-desc > div {
+	max-width: 1280px;
+	margin: auto;
 }
 
 .banner-desc-1 {
