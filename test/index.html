@@ -10,14 +10,29 @@
 			href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap"
 			rel="stylesheet"
 		/>
+
 		<title>Vite App</title>
 	</head>
-
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 	</style>
+
 	<body>
 		<div id="app"></div>
 		<script type="module" src="/src/main.ts"></script>
+		<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+		<script>
+			const lenis = new Lenis({
+				duration: 1.2,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			});
+
+			function raf(time) {
+				lenis.raf(time);
+				requestAnimationFrame(raf);
+			}
+
+			requestAnimationFrame(raf);
+		</script>
 	</body>
 </html>

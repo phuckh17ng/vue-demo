@@ -1,6 +1,10 @@
+html {
+	scroll-behavior: initial;
+	// overflow: hidden;
+}
+
 * {
 	margin: 0;
-	scroll-behavior: smooth;
 }
 
 ul {

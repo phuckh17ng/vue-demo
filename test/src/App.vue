@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
 	<header></header>
-
 	<main>
 		<Navbar></Navbar>
 		<LandingPage></LandingPage>

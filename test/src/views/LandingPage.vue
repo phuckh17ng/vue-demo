@@ -1,27 +1,15 @@
 <script lang="ts">
 import HeaderSlide from "@/components/HeaderSlide.vue";
 import Slider from "@/components/Slider.vue";
-
+import "../animations/animations";
 export default {
 	components: { Slider },
 };
-window.addEventListener("scroll", () => {
-	let figure1 = document.getElementById("figure1");
-
-	let value = window.scrollY;
-	console.log(value);
-
-	if (figure1) {
-		console.log(figure1.style.right);
-		figure1.style.right = value * 0.23 + "px";
-		figure1.style.transition = "linear";
-	}
-});
 </script>
 
 <template>
 	<div class="landingpage">
-		<section class="banner">
+		<section class="banner" id="banner">
 			<div class="figure-mask">
 				<img src="../assets/pic1.webp" id="figure1" />
 			</div>
@@ -40,14 +28,14 @@ window.addEventListener("scroll", () => {
 			</div>
 		</section>
 		<section class="slider">
-			<Slider> </Slider>
+			<Slider></Slider>
 		</section>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 .landingpage {
-	height: 400vh;
+	height: 100%;
 	background-color: #f6f4f0;
 }
 .bg-gradient {
@@ -102,9 +90,9 @@ window.addEventListener("scroll", () => {
 	margin-right: 16px;
 }
 
-.slider {
-	margin-top: 128px;
-}
+// .slider {
+// 	margin-top: 128px;
+// }
 
 // .slider {
 // 	position: relative;
