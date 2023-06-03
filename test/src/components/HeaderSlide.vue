@@ -31,15 +31,25 @@ export default {
 	border-radius: 20px;
 	overflow: hidden;
 	transition: box-shadow 0.5s;
-	// transition-duration: 500ms;
-	// border-radius: 20px;
+	> img {
+		width: 100%;
+		border-radius: 20px;
+		transition: all 0.5s ease-in-out;
+		transform: scale(1);
+	}
 }
-.slide1 > img {
-	width: 100%;
-	border-radius: 20px;
-	overflow: hidden;
-	transition: ease-in-out;
+.slide1:hover {
+	box-shadow: none;
 	transition-duration: 500ms;
+	> img {
+		transform: scale(1.1);
+	}
+	.slide-mask {
+		opacity: 0;
+	}
+	.slide-subtitle {
+		opacity: 0;
+	}
 }
 .slide-mask {
 	width: 100%;
@@ -71,34 +81,37 @@ export default {
 .subtitle-name {
 	font-size: 24px;
 }
-.slide1:hover {
-	box-shadow: none;
-	transition-duration: 500ms;
-	.slide1 > img {
-		scale: 1.1;
-	}
-	.slide-mask {
-		opacity: 0;
-	}
-	.slide-subtitle {
-		opacity: 0;
-	}
-}
 
 #slide1 {
-	z-index: 3;
-	position: absolute;
-	top: calc(50vh - 175px);
+	position: sticky;
+	transition: all 1s cubic-bezier(0.22, 0.87, 0, 1);
+	top: calc(100vh);
+	opacity: 0;
 }
 
 #slide2 {
-	position: absolute;
-	top: calc(100vh - 175px);
+	position: sticky;
+	transition: all 1s cubic-bezier(0.22, 0.87, 0, 1);
+	opacity: 0;
+	top: calc(100vh);
+	// animation: exam 0.7s ease-out;
 }
 
 #slide3 {
-	z-index: 3;
-	position: absolute;
-	top: calc(150vh - 175px);
+	position: sticky;
+	opacity: 0;
+	transition: all 1s cubic-bezier(0.22, 0.87, 0, 1);
+	top: calc(100vh);
+}
+
+@keyframes exam {
+	from {
+		top: 100vh;
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		top: calc(50vh - 175px);
+	}
 }
 </style>

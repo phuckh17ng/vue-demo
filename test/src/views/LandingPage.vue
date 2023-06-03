@@ -28,6 +28,7 @@ export default {
 			</div>
 		</section>
 		<section class="slider">
+			<!-- <h1 class="banner-desc-1">Made to Be Played</h1> -->
 			<Slider></Slider>
 		</section>
 	</div>
@@ -35,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .landingpage {
-	height: 100%;
+	height: 1000vh;
 	background-color: #f6f4f0;
 }
 .bg-gradient {
@@ -90,12 +91,13 @@ export default {
 	margin-right: 16px;
 }
 
-// .slider {
-// 	margin-top: 128px;
-// }
-
-// .slider {
-// 	position: relative;
-// 	top: -120px;
-// }
+.slider {
+	width: 100%;
+	height: 100%;
+	.banner-desc-1 {
+		text-align: center;
+		position: sticky;
+		top: calc(10vh);
+	}
+}
 </style>

@@ -8,7 +8,6 @@ export default {
 </script>
 <template>
 	<div class="header-slider" id="header-slider">
-		<!-- <img src="../assets/pic2.jpg" /> -->
 		<div class="slide">
 			<HeaderSlide
 				id="slide1"
@@ -44,11 +43,12 @@ export default {
 	width: 100%;
 	max-width: 1280px;
 	margin: auto;
-	height: 400vh;
+	height: 500vh;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: space-between;
 	grid-gap: 36px;
+	// overflow: hidden;
 	// background-color: #f6f4f0;
 }
 .slide {

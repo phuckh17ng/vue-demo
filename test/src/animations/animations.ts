@@ -25,40 +25,48 @@ window.addEventListener("scroll", () => {
 		if (value >= viewHeight100) {
 			slide1.style.position = "sticky";
 			slide1.style.top = "calc(50vh - 175px)";
+			slide1.style.opacity = "1";
 		} else {
-			slide1.style.position = "absolute";
-			slide1.style.top = "calc(50vh - 175px)";
-		}
-
-		if (value >= viewHeight100 * 1.5) {
-			slide2.style.position = "sticky";
-			slide2.style.top = "calc(50vh - 175px)";
-		} else {
-			slide2.style.position = "absolute";
-			slide2.style.top = "calc(100vh - 175px)";
+			slide1.style.position = "sticky";
+			slide1.style.top = "100vh";
+			slide1.style.opacity = "0";
 		}
 
 		if (value >= viewHeight100 * 2) {
-			slide3.style.position = "sticky";
-			slide3.style.top = "calc(50vh - 175px)";
+			slide2.style.position = "sticky";
+			slide2.style.top = "calc(50vh - 175px)";
+			slide2.style.opacity = "1";
 		} else {
-			slide3.style.position = "absolute";
-			slide3.style.top = "calc(150vh - 175px)";
+			slide2.style.position = "sticky";
+			slide2.style.top = "100vh";
+			slide2.style.opacity = "0";
 		}
 
-		if (value >= viewHeight100 * 2.5) {
+		if (value >= viewHeight100 * 3) {
+			slide3.style.position = "sticky";
+			slide3.style.top = "calc(50vh - 175px)";
+			slide3.style.opacity = "1";
+		} else {
+			slide3.style.position = "sticky";
+			slide3.style.top = "100vh";
+			slide3.style.opacity = "0";
+		}
+
+		if (value >= viewHeight100 * 4) {
 			slide4.style.position = "sticky";
 			slide4.style.top = "calc(50vh - 175px)";
+			slide4.style.opacity = "1";
 		} else {
-			slide4.style.position = "absolute";
-			slide4.style.top = "calc(200vh - 175px)";
+			slide4.style.position = "sticky";
+			slide4.style.top = "100vh";
+			slide4.style.opacity = "0";
 		}
 
 		console.log(value);
+		console.log(viewHeight100);
 		console.log(slide2.getBoundingClientRect().height);
 		console.log(slide2.getBoundingClientRect().top);
-		console.log(viewHeight100);
-		// figure1.style.right = value * 0.23 + "px";
-		// figure1.style.transition = "linear";
+		figure1.style.right = value * 0.23 + "px";
+		figure1.style.transition = "linear";
 	}
 });

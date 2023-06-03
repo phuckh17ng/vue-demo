@@ -114,7 +114,8 @@ export default {
 }
 
 #slide4 {
-	position: absolute;
-	top: calc(200vh - 175px);
+	position: static;
+	top: 100vh;
+	transition: all 1s cubic-bezier(0.22, 0.87, 0, 1);
 }
 </style>
