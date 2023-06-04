@@ -2,7 +2,17 @@
 import HeaderSlide from "@/components/HeaderSlide.vue";
 import Slider from "@/components/Slider.vue";
 import "../animations/animations";
+import banner from "../assets/pic1.webp";
+import appleImg from "../assets/Apple Store.png";
+import googleImg from "../assets/Google Store.png";
 export default {
+	data: function () {
+		return {
+			banner: banner,
+			appleImg: appleImg,
+			googleImg: googleImg,
+		};
+	},
 	components: { Slider },
 };
 </script>
@@ -11,7 +21,7 @@ export default {
 	<div class="landingpage">
 		<section class="banner" id="banner">
 			<div class="figure-mask">
-				<img src="../assets/pic1.webp" id="figure1" />
+				<img :src="banner" id="figure1" />
 			</div>
 			<div class="banner-desc">
 				<div>
@@ -21,8 +31,8 @@ export default {
 					</div>
 
 					<div class="btn-download">
-						<img class="btn-download-apple" src="../assets/Apple Store.png" />
-						<img class="btn-download-google" src="../assets/Google Play.png" />
+						<img class="btn-download-apple" :src="appleImg" />
+						<img class="btn-download-google" :src="googleImg" />
 					</div>
 				</div>
 			</div>
