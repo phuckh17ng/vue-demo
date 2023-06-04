@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
 		figure1.style.transition = "linear";
 	}
 });
-
+ 
 window.addEventListener("scroll", () => {
 	let slide1 = document.getElementById("slide1");
 	let slide2 = document.getElementById("slide2");
