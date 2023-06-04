@@ -4,7 +4,7 @@ import Slider from "@/components/Slider.vue";
 import "../animations/animations";
 import banner from "../assets/pic1.webp";
 import appleImg from "../assets/Apple Store.png";
-import googleImg from "../assets/Google Store.png";
+import googleImg from "../assets/Google Play.png";
 export default {
 	data: function () {
 		return {

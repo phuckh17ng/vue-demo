@@ -1,6 +1,5 @@
 window.addEventListener("scroll", () => {
 	let figure1 = document.getElementById("figure1");
-
 	let value = window.scrollY;
 	// console.log(value);
 
@@ -15,13 +14,13 @@ window.addEventListener("scroll", () => {
 	let slide2 = document.getElementById("slide2");
 	let slide3 = document.getElementById("slide3");
 	let slide4 = document.getElementById("slide4");
-	let viewHeight100 = document
-		.getElementById("banner")
-		.getBoundingClientRect().height;
+	let banner = document.getElementById("banner");
 
 	let value = window.scrollY;
 
-	if (slide1 && slide2 && slide3 && slide4) {
+	if (slide1 && slide2 && slide3 && slide4 && banner) {
+		const viewHeight100 = banner.getBoundingClientRect().height;
+
 		if (value >= viewHeight100) {
 			slide1.style.position = "sticky";
 			slide1.style.top = "calc(50vh - 175px)";
@@ -66,7 +65,5 @@ window.addEventListener("scroll", () => {
 		console.log(viewHeight100);
 		console.log(slide2.getBoundingClientRect().height);
 		console.log(slide2.getBoundingClientRect().top);
-		figure1.style.right = value * 0.23 + "px";
-		figure1.style.transition = "linear";
 	}
 });
