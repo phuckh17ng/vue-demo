@@ -5,6 +5,7 @@ import "../animations/animations";
 import banner from "../assets/pic1.webp";
 import appleImg from "../assets/Apple Store.png";
 import googleImg from "../assets/Google Play.png";
+import About from "@/components/About.vue";
 export default {
 	data: function () {
 		return {
@@ -13,7 +14,7 @@ export default {
 			googleImg: googleImg,
 		};
 	},
-	components: { Slider },
+	components: { Slider, About },
 };
 </script>
 
@@ -41,12 +42,16 @@ export default {
 			<!-- <h1 class="banner-desc-1">Made to Be Played</h1> -->
 			<Slider></Slider>
 		</section>
+
+		<section style="background-color: #f6f4f0">
+			<About />
+		</section>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 .landingpage {
-	height: 1000vh;
+	height: 600vh;
 	background-color: #f6f4f0;
 }
 .bg-gradient {
@@ -103,7 +108,6 @@ export default {
 
 .slider {
 	width: 100%;
-	height: 100%;
 	.banner-desc-1 {
 		text-align: center;
 		position: sticky;
