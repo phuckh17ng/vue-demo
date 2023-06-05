@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss" scoped>
 .landingpage {
-	height: 600vh;
+	height: 800vh;
 	background-color: #f6f4f0;
 }
 .bg-gradient {
