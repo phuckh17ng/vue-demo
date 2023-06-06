@@ -6,19 +6,19 @@
 			<div class="header-logo">Tripo Games</div>
 
 			<ul class="header-navigation">
-				<li class="navigation-1">
+				<li id="navigation-1">
 					<a href="#">Home</a>
 				</li>
-				<li class="navigation-2">
+				<li id="navigation-2">
 					<a href="#">Games</a>
 				</li>
-				<li class="navigation-3">
+				<li id="navigation-3">
 					<a href="#">Careers</a>
 				</li>
-				<li class="navigation-4">
+				<li id="navigation-4">
 					<a href="#">About</a>
 				</li>
-				<li class="navigation-5">
+				<li id="navigation-5">
 					<a href="#">Contact</a>
 				</li>
 			</ul>
@@ -81,11 +81,11 @@
 	justify-items: center;
 	cursor: pointer;
 }
-.navigation-1 {
+#navigation-1 {
 	border-bottom-left-radius: 20px;
 }
 
-.navigation-5 {
+#navigation-5 {
 	border-bottom-right-radius: 20px;
 }
 .header-navigation > li:hover {

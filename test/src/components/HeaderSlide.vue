@@ -21,7 +21,9 @@ export default {
 </template>
 <style lang="scss" scoped>
 .slide1 {
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25),
+		-2px -2px 2px rgba(255, 255, 255, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.25),
+		-6px -4px 6px rgba(255, 255, 255, 0.25);
 	width: 100%;
 	height: 350px;
 	display: flex;

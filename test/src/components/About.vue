@@ -48,6 +48,9 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 20px;
+			box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25),
+				-2px -2px 2px rgba(255, 255, 255, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.25),
+				-6px -4px 6px rgba(255, 255, 255, 0.25);
 		}
 		#figure1 {
 			position: absolute;
@@ -58,7 +61,6 @@
 			left: -120px;
 			animation: upAndDown 2s infinite ease-in-out alternate;
 			> img {
-				// box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
 				filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 3px 8px);
 			}
 		}
@@ -89,6 +91,9 @@
 	}
 
 	.btn-learn-more {
+		box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25),
+			-2px -2px 2px rgba(255, 255, 255, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.25),
+			-6px -4px 6px rgba(255, 255, 255, 0.25);
 		margin: auto;
 		display: block;
 		margin-top: 5vh;
@@ -98,6 +103,10 @@
 		background: #da392b;
 		color: white;
 		font-size: 16px;
+		transition: box-shadow 0.5s ease;
+	}
+	.btn-learn-more:hover {
+		box-shadow: none;
 	}
 }
 

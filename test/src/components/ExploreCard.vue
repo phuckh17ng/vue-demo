@@ -34,7 +34,10 @@ export default {
 .explore-card {
 	// transition-duration: var(--time);
 	transition: box-shadow var(--time);
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25),
+		-2px -2px 2px rgba(255, 255, 255, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.25),
+		-6px -4px 6px rgba(255, 255, 255, 0.25);
+
 	--width: 100%;
 	--time: 0.7s;
 	width: 100%;
