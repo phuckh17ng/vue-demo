@@ -89,4 +89,36 @@ window.addEventListener("scroll", () => {
 			about3.style.opacity = "0";
 		}
 	}
+
+	let game1 = document.getElementById("game1");
+	let game2 = document.getElementById("game2");
+	let game3 = document.getElementById("game3");
+	let figure2 = document.getElementById("figure2");
+	if (game1 && game2 && game3 && figure2) {
+		if (value >= viewHeight100 * 7.5) {
+			game1.style.opacity = "1";
+			game1.style.left = "100px";
+
+			game2.style.opacity = "1";
+			game2.style.right = "100px";
+		} else {
+			game1.style.opacity = "0";
+			game1.style.left = "0px";
+
+			game2.style.opacity = "0";
+			game2.style.right = "0px";
+		}
+
+		if (value >= viewHeight100 * 8.4) {
+			game3.style.opacity = "1";
+			game3.style.left = "100px";
+
+			figure2.style.opacity = "1";
+		} else {
+			game3.style.opacity = "0";
+			game3.style.left = "0px";
+
+			figure2.style.opacity = "0";
+		}
+	}
 });
