@@ -1,7 +1,8 @@
 html {
-	scroll-behavior: initial;
-	// overflow: hidden;
+	scroll-behavior: smooth;
+	overflow: hidden;
 }
+
 html.lenis {
 	height: auto;
 }

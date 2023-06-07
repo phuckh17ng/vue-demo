@@ -6,6 +6,7 @@ import appleImg from "../assets/Apple Store.png";
 import googleImg from "../assets/Google Play.png";
 import About from "@/components/About.vue";
 import OurGames from "@/components/OurGames.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
 	data: function () {
@@ -15,13 +16,13 @@ export default {
 			googleImg: googleImg,
 		};
 	},
-	components: { Slider, About, OurGames },
+	components: { Slider, About, OurGames, Contact },
 };
 </script>
 
 <template>
 	<div class="landingpage">
-		<section class="banner" id="banner">
+		<section class="banner home" id="home">
 			<div class="figure-mask">
 				<img :src="banner" id="figure1" />
 			</div>
@@ -40,20 +41,21 @@ export default {
 			</div>
 		</section>
 
-		<section class="slider">
+		<section class="slider" id="game">
 			<Slider></Slider>
 		</section>
 
-		<section style="background-color: #f6f4f0">
+		<section style="background-color: #f6f4f0" id="about">
 			<About />
-			<OurGames />
 		</section>
+		<section id="ourgames"><OurGames /></section>
+		<section id="contact"><Contact /></section>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 .landingpage {
-	height: 1050vh;
+	height: 100%;
 	background-color: #f6f4f0;
 }
 .bg-gradient {

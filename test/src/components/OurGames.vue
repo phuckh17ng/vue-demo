@@ -9,7 +9,7 @@ export default {
 	<div class="ourgame">
 		<div class="ourgame-subtitle">Our Games</div>
 		<p class="ourgame-description">
-			I'm a paragraph. Click here to add your own text and edit me. I’m a great
+			I'm a paragraph. Click here to add your own text and edit me. I'm a great
 			place for you to<br />
 			tell a story and let your users know a little more about you.
 		</p>
@@ -66,6 +66,7 @@ export default {
 	height: 100%;
 	margin: auto;
 	padding-top: 35vh;
+	padding-bottom: 35vh;
 	.ourgame-description {
 		text-align: center;
 		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

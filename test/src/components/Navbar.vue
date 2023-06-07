@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Lenis from "@studio-freight/lenis";
+const lenis = new Lenis();
+</script>
 
 <template>
 	<header class="header">
@@ -6,20 +9,28 @@
 			<div class="header-logo">Tripo Games</div>
 
 			<ul class="header-navigation">
-				<li id="navigation-1">
-					<a href="#">Home</a>
+				<li
+					id="navigation-1"
+					class="home active"
+					onclick="lenis.scrollTo('#home')"
+				>
+					<a href="#home">Home</a>
 				</li>
-				<li id="navigation-2">
-					<a href="#">Games</a>
+				<li id="navigation-2" class="game" onclick="lenis.scrollTo('#game')">
+					<a href="#game">Games</a>
 				</li>
-				<li id="navigation-3">
-					<a href="#">Careers</a>
+				<li id="navigation-3" class="about" onclick="lenis.scrollTo('#about')">
+					<a href="#about">About</a>
 				</li>
-				<li id="navigation-4">
-					<a href="#">About</a>
+				<li
+					id="navigation-4"
+					class="ourgames"
+					onclick="lenis.scrollTo('#ourgames')"
+				>
+					<a href="#ourgames">Careers</a>
 				</li>
-				<li id="navigation-5">
-					<a href="#">Contact</a>
+				<li id="navigation-5" class="contact">
+					<a href="#contact">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -32,7 +43,7 @@
 	// max-width: 1280px;
 	height: 64px;
 	position: fixed;
-	z-index: 10;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
@@ -42,7 +53,7 @@
 	max-width: 1280px;
 	height: 64px;
 	// position: fixed;
-	z-index: 10;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
@@ -94,12 +105,28 @@
 	height: 100%;
 	text-align: center;
 	margin: auto;
-	transition: ease-in-out;
-	transition-duration: 300ms;
+	// transition: ease-in-out;
+	// transition-duration: 500ms;
 	> a {
 		color: white;
-		transition: ease-in-out;
-		transition-duration: 430ms;
+		// transition: ease-in-out;
+		// transition-duration: 300ms;
+	}
+}
+
+.active {
+	background: #da392b;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: auto;
+	> a {
+		color: white !important;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		display: flex;
+		align-items: center;
 	}
 }
 .header-navigation > li > a {
@@ -108,5 +135,10 @@
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: 400;
 	font-size: 17px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
 }
 </style>

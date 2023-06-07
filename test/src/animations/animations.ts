@@ -14,15 +14,15 @@ window.addEventListener("scroll", () => {
 	let slide2 = document.getElementById("slide2");
 	let slide3 = document.getElementById("slide3");
 	let slide4 = document.getElementById("slide4");
-	let banner = document.getElementById("banner");
+	let home = document.getElementById("home");
 
 	let value = window.scrollY;
-	if (!banner) {
+	if (!home) {
 		return;
 	}
-	const viewHeight100 = banner.getBoundingClientRect().height;
+	const viewHeight100 = home.getBoundingClientRect().height;
 	//slider animation
-	if (slide1 && slide2 && slide3 && slide4 && banner) {
+	if (slide1 && slide2 && slide3 && slide4 && home) {
 		if (value >= viewHeight100) {
 			slide1.style.position = "sticky";
 			slide1.style.top = "calc(50vh - 175px)";
@@ -119,6 +119,51 @@ window.addEventListener("scroll", () => {
 			game3.style.left = "0px";
 
 			figure2.style.opacity = "0";
+		}
+	}
+	const sections = document.querySelectorAll("section");
+	const navLi = document.querySelectorAll(".header-navigation li");
+	var current: string = "";
+	sections.forEach((section) => {
+		const sectionTop = section.offsetTop;
+		console.log(sectionTop);
+		if (value >= sectionTop - 15) {
+			current = section.getAttribute("id");
+			console.log(current);
+		}
+	});
+	if (navLi) {
+		navLi.forEach((li) => {
+			li.classList.remove("active");
+			if (li.classList.contains(current)) {
+				console.log(li.classList.contains(current));
+				li.classList.add("active");
+			}
+		});
+	}
+
+	let banner1 = document.getElementById("banner1");
+	let banner2 = document.getElementById("banner2");
+	let figure3 = document.getElementById("figure3");
+	if (banner1 && banner2 && figure3) {
+		if (banner1.getBoundingClientRect().top <= viewHeight100) {
+			console.log(banner1.getBoundingClientRect().top);
+			banner1.style.top = -banner1.getBoundingClientRect().top * 0.9 + "px";
+			banner1.style.transition = "linear";
+			// banner1.style.transitionDuration = "1s";
+		}
+		if (banner1.getBoundingClientRect().top <= viewHeight100 * 0.1) {
+			console.log(1);
+			figure3.style.transform = "translateY(0px)";
+			figure3.style.opacity = "1";
+		} else {
+			figure3.style.transform = "translateY(500px)";
+			figure3.style.opacity = "0";
+		}
+		if (banner2.getBoundingClientRect().top <= viewHeight100) {
+			console.log(banner2.getBoundingClientRect().top);
+			banner2.style.top = -banner2.getBoundingClientRect().top * 0.7 + "px";
+			banner2.style.transition = "linear";
 		}
 	}
 });
