@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.14",
+    "gsap": "^3.12.1",
     "pinia": "^2.0.36",
     "vue": "^3.3.2"
   },
   "devDependencies": {
     "@tsconfig/node18": "^2.0.1",
+    "@types/jquery": "^3.5.16",
     "@types/node": "^18.16.8",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",

@@ -81,8 +81,8 @@
 		> img {
 			overflow: hidden;
 			position: relative;
-			height: 100%;
-			width: 100%;
+			height: 110%;
+			width: 110%;
 			object-fit: cover;
 			z-index: 1;
 		}

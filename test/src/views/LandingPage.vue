@@ -22,6 +22,9 @@ export default {
 
 <template>
 	<div class="landingpage">
+		<div id="cursor"></div>
+		<div id="cursor-border"></div>
+
 		<section class="banner home" id="home">
 			<div class="figure-mask">
 				<img :src="banner" id="figure1" />
@@ -54,6 +57,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+#cursor {
+	position: fixed;
+	top: -5px;
+	left: -5px;
+	width: 40px;
+	height: 40px;
+	background-color: #da392b;
+	border-radius: 50%;
+	pointer-events: none;
+	mix-blend-mode: difference;
+	z-index: 999;
+}
 .landingpage {
 	height: 100%;
 	background-color: #f6f4f0;

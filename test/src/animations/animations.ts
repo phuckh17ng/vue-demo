@@ -145,14 +145,16 @@ window.addEventListener("scroll", () => {
 	let banner1 = document.getElementById("banner1");
 	let banner2 = document.getElementById("banner2");
 	let figure3 = document.getElementById("figure3");
-	if (banner1 && banner2 && figure3) {
-		if (banner1.getBoundingClientRect().top <= viewHeight100) {
-			console.log(banner1.getBoundingClientRect().top);
-			banner1.style.top = -banner1.getBoundingClientRect().top * 0.9 + "px";
+	let contact = document.getElementById("contact");
+	if (banner1 && banner2 && figure3 && contact) {
+		console.log(contact.getBoundingClientRect().top);
+		if (contact.getBoundingClientRect().top <= viewHeight100) {
+			banner1.style.top = -contact.getBoundingClientRect().top * 0.7 + "px";
 			banner1.style.transition = "linear";
-			// banner1.style.transitionDuration = "1s";
+		} else {
+			banner1.style.top = "0px";
 		}
-		if (banner1.getBoundingClientRect().top <= viewHeight100 * 0.1) {
+		if (banner1.getBoundingClientRect().top <= viewHeight100) {
 			console.log(1);
 			figure3.style.transform = "translateY(0px)";
 			figure3.style.opacity = "1";
@@ -166,4 +168,21 @@ window.addEventListener("scroll", () => {
 			banner2.style.transition = "linear";
 		}
 	}
+});
+
+import { gsap } from "gsap";
+
+window.addEventListener("mousemove", (e) => {
+	let circle = document.getElementById("cursor");
+	if (!circle) return;
+	gsap.to(circle, {
+		x: e.clientX - 20,
+		y: e.clientY - 15,
+		duration: 0.4,
+		ease: "ease-in-out",
+	});
+
+	// console.log(mouseX, mouseY);
+	// circle.style.left = mouseX + "px";
+	// circle.style.top = mouseY + "px";
 });
