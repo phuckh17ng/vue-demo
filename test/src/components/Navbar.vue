@@ -100,7 +100,7 @@ const lenis = new Lenis();
 	border-bottom-right-radius: 20px;
 }
 .header-navigation > li:hover {
-	background: #da392b;
+	background: #272443;
 	width: 100%;
 	height: 100%;
 	text-align: center;

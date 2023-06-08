@@ -147,15 +147,17 @@ window.addEventListener("scroll", () => {
 	let figure3 = document.getElementById("figure3");
 	let contact = document.getElementById("contact");
 	if (banner1 && banner2 && figure3 && contact) {
-		console.log(contact.getBoundingClientRect().top);
 		if (contact.getBoundingClientRect().top <= viewHeight100) {
 			banner1.style.top = -contact.getBoundingClientRect().top * 0.7 + "px";
 			banner1.style.transition = "linear";
 		} else {
 			banner1.style.top = "0px";
 		}
-		if (banner1.getBoundingClientRect().top <= viewHeight100) {
+		console.log(contact.getBoundingClientRect().top);
+
+		if (contact.getBoundingClientRect().top <= 200) {
 			console.log(1);
+
 			figure3.style.transform = "translateY(0px)";
 			figure3.style.opacity = "1";
 		} else {
@@ -176,10 +178,10 @@ window.addEventListener("mousemove", (e) => {
 	let circle = document.getElementById("cursor");
 	if (!circle) return;
 	gsap.to(circle, {
-		x: e.clientX - 20,
+		x: e.clientX - 15,
 		y: e.clientY - 15,
-		duration: 0.4,
-		ease: "ease-in-out",
+		duration: 0.5,
+		ease: "power1.out",
 	});
 
 	// console.log(mouseX, mouseY);
