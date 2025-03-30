@@ -18,19 +18,19 @@ export default {
       <img src="/src/assets/pic7.png" />
       <Game
         id="game1"
-        url="src/assets/pic8.png"
+        url="/src/assets/pic8.png"
         name="Kipon"
         description="Casual - Free"
       />
       <Game
         id="game2"
-        url="src/assets/pic9.png"
+        url="/src/assets/pic9.png"
         name="Robotrix"
         description="RPG - Free"
       />
       <Game
         id="game3"
-        url="src/assets/pic10.png"
+        url="/src/assets/pic10.png"
         name="Treasure Box"
         description="Adventure - Free"
       />
