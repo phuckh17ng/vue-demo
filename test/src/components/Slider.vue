@@ -11,7 +11,7 @@ export default {
     <div class="slide">
       <HeaderSlide
         id="slide1"
-        url="/src/assets/pic2.jpg"
+        url="/src/assets/pic2.png"
         name="Kipon"
         description="Casual - Free"
       />
@@ -19,7 +19,7 @@ export default {
     <div class="slide">
       <HeaderSlide
         id="slide2"
-        url="/src/assets/pic3.jpg"
+        url="/src/assets/pic3.png"
         name="Robotrix"
         description="RPG - Free"
       />
@@ -27,7 +27,7 @@ export default {
     <div class="slide">
       <HeaderSlide
         id="slide3"
-        url="/src/assets/pic4.jpg"
+        url="/src/assets/pic4.png"
         name="Treasure Box"
         description="Adventure - Free"
       />
